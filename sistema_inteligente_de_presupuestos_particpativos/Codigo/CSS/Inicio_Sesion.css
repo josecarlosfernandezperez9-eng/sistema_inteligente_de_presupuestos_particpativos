@@ -38,7 +38,7 @@ body {
 
 /* Logo del gobierno de México */
 .logo img {
-    height: 80px; /* Altura fija del logo */
+    height: 100px; /* Altura fija del logo */
     filter: brightness(0) invert(1); /* Convierte el logo a blanco */
 }
 
@@ -132,7 +132,8 @@ body {
 }
 
 .logo-llave img {
-    height: 80px; /* Altura del logo */
+    height: 200px; /* Altura del logo */
+    text-align: center;
     filter: brightness(0) invert(1); /* Convierte a blanco */
 }
 
@@ -298,7 +299,7 @@ body {
 
 
 /* ========================================
-   FOOTER - PIE DE PÁGINA
+    FOOTER - PIE DE PÁGINA
    ======================================== */
 
 /* Contenedor principal del footer */
@@ -327,7 +328,7 @@ body {
 
 /* Logo del footer */
 .footer-logo {
-    height: 200px; /* Altura del logo */
+    height: 100px; /* Altura del logo */
     filter: brightness(0) invert(1); /* Convierte a blanco */
 }
 
@@ -385,7 +386,7 @@ body {
 }
 
 /* ========================================
-   DISEÑO RESPONSIVO - ADAPTACIÓN A MÓVILES
+    DISEÑO RESPONSIVO - ADAPTACIÓN A MÓVILES
    ======================================== */
 
 /* TABLETS Y PANTALLAS MEDIANAS (1024px o menos) */

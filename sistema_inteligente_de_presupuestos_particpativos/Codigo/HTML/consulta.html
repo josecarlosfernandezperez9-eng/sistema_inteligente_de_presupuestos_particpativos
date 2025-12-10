@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gastos Públicos - Tepoztlán</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/consulta.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-header">
+            <div class="logo-header">
+                <img src="../../Galeria/Logos/gobierno-mexico.png" alt="Gobierno de México" />
+                <span class="logo-text"><br><strong></strong></span>
+            </div>
+            <nav class="nav">
+                <a href="inicio.html">Inicio</a>
+                <a href="gastos.html">Transparencia</a>
+                <a href="Inicio_Sesion.html">Inicio de sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-main">
+            <!-- Logo Municipal -->
+            <div class="logo-municipal">
+                <img src="../../Galeria/Logos/tepotzoclan.png" alt="Tepoztlán" />
+            </div>
+
+            <!-- Título -->
+            <h1 class="page-title">Gastos Públicos</h1>
+
+            <!-- Billetera Card -->
+            <div class="billetera-card">
+                <div class="card-left">
+                    <!-- Gráfica Chart.js -->
+                    <div class="chart-container">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+
+                    <!-- Leyenda -->
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #e91e63;"></span>
+                            <span class="legend-text">Gasto Corriente</span>
+                        </div>
+                        <div class="legend-item">
+                                <span class="legend-color" style="background: #2196f3;"></span>
+                            <span class="legend-text">Inversión</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #ffc107;"></span>
+                            <span class="legend-text">Servicios Públicos</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #00bcd4;"></span>
+                            <span class="legend-text">Desarrollo Social</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-right">
+                    <h2 class="card-title">La Billetera Municipal</h2>
+                    <p class="card-description">Distribuye el presupuesto total de <strong>$520,000,000</strong>. La suma no puede exceder ese monto.</p>
+
+                    <!-- Sliders -->
+                    <div class="sliders-container">
+                        <!-- Gasto Corriente -->
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="slider1">Gasto Corriente (Nómina/Luz)</label>
+                                <span class="slider-value">$<span id="value1">130,000,000</span></span>
+                            </div>
+                            <input type="range" min="0" max="520000000" step="1000000" value="130000000" class="slider" id="slider1" data-index="0" style="--slider-color:#e91e63;">
+                        </div>
+
+                        <!-- Inversión -->
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="slider2">Inversión (Obras Nuevas)</label>
+                                <span class="slider-value">$<span id="value2">130,000,000</span></span>
+                            </div>
+                            <input type="range" min="0" max="520000000" step="1000000" value="130000000" class="slider" id="slider2" data-index="1" style="--slider-color:#2196f3;">
+                        </div>
+
+                        <!-- Servicios Públicos -->
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="slider3">Servicios Públicos (Mantenimiento)</label>
+                                <span class="slider-value">$<span id="value3">130,000,000</span></span>
+                            </div>
+                            <input type="range" min="0" max="520000000" step="1000000" value="130000000" class="slider" id="slider3" data-index="2" style="--slider-color:#ffc107;">
+                        </div>
+
+                        <!-- Desarrollo Social -->
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="slider4">Desarrollo Social (Ayudas)</label>
+                                <span class="slider-value">$<span id="value4">130,000,000</span></span>
+                            </div>
+                            <input type="range" min="0" max="520000000" step="1000000" value="130000000" class="slider" id="slider4" data-index="3" style="--slider-color:#00bcd4;">
+                        </div>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="total-container" id="total-container">
+                        <span>Total asignado: $<span id="total">520,000,000</span></span>
+                    </div>
+
+                    <!-- Barra de progreso del gasto total -->
+                    <div id="progress-wrapper">
+                    <div id="progress-bar"></div>
+</div>
+
+
+                    <!-- Botón Continuar -->
+                    <button class="btn-continuar enabled" id="btn-continuar">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script -->
+    <script src="../Java/consulta.js"></script>
+</body>
+</html>

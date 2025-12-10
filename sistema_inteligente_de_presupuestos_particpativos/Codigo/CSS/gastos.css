@@ -34,7 +34,7 @@ body {
 }
 
 .logo-header img {
-    height: 40px;
+    height: 100px;
     filter: brightness(0) invert(1);
 }
 
@@ -196,7 +196,7 @@ body {
 }
 
 .footer-logo img {
-    height: 50px;
+    height: 150px;
     filter: brightness(0) invert(1);
 }
 

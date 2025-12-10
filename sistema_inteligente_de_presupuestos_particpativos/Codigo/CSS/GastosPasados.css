@@ -1,0 +1,433 @@
+/* ========================================
+    RESET Y ESTILOS BASE
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+    HEADER - BARRA SUPERIOR
+   ======================================== */
+
+/* Contenedor principal del header con degradado burgundy */
+.header {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contenedor interno: logo + navegación */
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo del gobierno */
+.logo img {
+    height: 80px;
+    filter: brightness(0) invert(1); /* Convierte logo a blanco */
+}
+
+/* Barra de navegación */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* Espacio entre elementos: 40px */
+}
+
+/* Enlaces de navegación (Inicio, Transparencia, etc) */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: opacity 0.3s;
+}
+
+/* Efecto hover en enlaces */
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Botón de búsqueda (lupa) */
+.btn-search {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.btn-search:hover {
+    opacity: 0.8;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+.main-content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   SECCIÓN HERO - TÍTULO Y ESCUDO
+   ======================================== */
+
+/* Sección superior con fondo blanco */
+.hero-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Contenedor del héroe */
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Contenedor del escudo de Guanajuato */
+.escudo-container {
+    flex-shrink: 0; /* No se encoge */
+}
+
+/* Imagen del escudo */
+.escudo {
+    width: 150px;
+    height: auto;
+}
+
+/* Contenedor del texto del héroe */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Título principal "Gastos Públicos" */
+.page-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* Subtítulo "Lo gastado" */
+.subtitle {
+    font-size: 1.8rem; /* 28.8px */
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+/* ========================================
+    SECCIÓN DE ESTADO VACÍO
+   ======================================== */
+
+/* Sección central con mensaje */
+.empty-state-section {
+    flex: 1; /* Ocupa espacio restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: white;
+}
+
+/* Contenedor del mensaje vacío */
+.empty-state-container {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Mensaje de estado vacío */
+.empty-state-message {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========================================
+    FOOTER - PIE DE PÁGINA
+   ======================================== */
+
+/* Contenedor principal del footer */
+.footer {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    margin-top: auto; /* Se empuja al final */
+}
+
+/* Contenedor interno del footer: 2 columnas */
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Izquierda más ancha */
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ========================================
+    COLUMNA IZQUIERDA DEL FOOTER
+   ======================================== */
+
+.footer-left {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Logo del footer */
+.footer-logo {
+    height: 70px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+/* Información del footer */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Título "Que somos?" */
+.footer-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Texto descriptivo */
+.footer-info p {
+    line-height: 1.6;
+    opacity: 0.95;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ========================================
+    COLUMNA DERECHA DEL FOOTER
+   ======================================== */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-end; /* Alineado a la derecha */
+}
+
+/* Enlace de denuncia */
+.footer-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+}
+
+/* ========================================
+    REDES SOCIALES
+   ======================================== */
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+/* Texto "Síguenos en" */
+.social-media p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Contenedor de íconos sociales */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Enlaces de redes sociales */
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* ========================================
+    INFORMACIÓN DE CONTACTO (079)
+   ======================================== */
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+/* Ícono del teléfono */
+.phone-icon {
+    flex-shrink: 0;
+}
+
+/* Contenedor del texto de contacto */
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* Número "079" */
+.contact-number {
+    font-size: 1.8rem; /* 28.8px */
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Texto "Comunícate, estamos para ayudarte" */
+.contact-description {
+    font-size: 0.85rem; /* 13.6px */
+    opacity: 0.95;
+    line-height: 1.2;
+}
+
+/* ========================================
+    DISEÑO RESPONSIVO - TABLETS
+   ======================================== */
+
+@media (max-width: 1024px) {
+    /* Footer pasa a 1 columna */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    /* Elementos del footer se alinean a la izquierda */
+    .footer-right {
+        align-items: flex-start;
+    }
+    
+    .social-media {
+        align-items: flex-start;
+    }
+    
+    /* Hero container se ajusta */
+    .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .escudo {
+        width: 120px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================
+    DISEÑO RESPONSIVO - MÓVILES
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Header vertical en móvil */
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Navegación vertical */
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Hero section con menos padding */
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .escudo {
+        width: 100px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    /* Mensaje vacío más pequeño */
+    .empty-state-message {
+        font-size: 1.2rem;
+    }
+    
+    /* Footer izquierdo vertical */
+    .footer-left {
+        flex-direction: column;
+    }
+    
+    .footer-logo {
+        height: 60px;
+    }
+    
+    /* Información de contacto con padding reducido */
+    .contact-info {
+        padding: 0.8rem 1rem;
+    }
+    
+    .contact-number {
+        font-size: 1.5rem;
+    }
+}

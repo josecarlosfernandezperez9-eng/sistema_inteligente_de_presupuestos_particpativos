@@ -1,4 +1,4 @@
-/* Reset y estilos base */
+    /* Reset y estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -175,6 +175,7 @@ body {
 }
 
 .hero-main-image {
+    height: 8   0px;
     max-width: 450px;
     width: 100%;
     height: auto;
@@ -198,7 +199,7 @@ body {
 }
 
 .gobierno-logo-footer img {
-    height: 100px;
+    height: 80px;
     filter: brightness(0) invert(1);
     object-fit: contain;
 }
@@ -316,7 +317,7 @@ body {
     }
 
     .hero-image {
-        margin-top: 40px;
+        margin-top: 140px;
         text-align: center;
     }
 
