@@ -1,0 +1,472 @@
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ========================================
+   HEADER - BARRA SUPERIOR
+   ======================================== */
+
+.header {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+    filter: brightness(0) invert(1);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.btn-login {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.6rem 1.8rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    background: white;
+    color: #621132;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL DE REGISTRO
+   ======================================== */
+
+.main-content {
+    background: white;
+    min-height: calc(100vh - 100px);
+}
+
+/* Contenedor dividido en 2 columnas */
+.register-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% cada columna */
+    gap: 3rem;
+    padding: 3rem;
+}
+
+/* ========================================
+   COLUMNA IZQUIERDA - CURP Y TELÉFONO
+   ======================================== */
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Sección de CURP */
+.curp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Label del CURP */
+.curp-label {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Link "consultarla aquí" */
+.link-consultarla {
+    color: #9d174d;
+    text-decoration: none;
+}
+
+.link-consultarla:hover {
+    text-decoration: underline;
+}
+
+/* Input del CURP */
+.curp-input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase; /* CURP siempre en mayúsculas */
+}
+
+.curp-input:focus {
+    outline: none;
+    border-color: #9d174d;
+}
+
+/* Contenedor del reCAPTCHA */
+.recaptcha-container {
+    margin: 1rem 0;
+}
+
+/* Información de SMS */
+.sms-info {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-left: 3px solid #9d174d;
+    border-radius: 5px;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0; /* No se encoge el ícono */
+}
+
+.sms-info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Link de Términos y Condiciones */
+.link-terms {
+    color: #9d174d;
+    text-decoration: none;
+}
+
+.link-terms:hover {
+    text-decoration: underline;
+}
+
+/* Botón Validar CURP */
+.btn-validate {
+    width: 100%;
+    background: #9d174d;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-validate:hover {
+    background: #7c1d47;
+}
+
+/* ========================================
+   SECCIÓN DE TELÉFONO
+   ======================================== */
+
+.phone-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Label del teléfono */
+.phone-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Texto "Este campo es requerido" */
+.required-field {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Espaciado adicional para el label de confirmación */
+.confirm-label {
+    margin-top: 1rem;
+}
+
+/* Contenedor del input de teléfono con código de país */
+.phone-input-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Select del código de país */
+.country-code {
+    width: 100px;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Input del teléfono */
+.phone-input {
+    flex: 1; /* Ocupa el resto del espacio */
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.phone-input:focus,
+.country-code:focus {
+    outline: none;
+    border-color: #9d174d;
+}
+
+/* ========================================
+   COLUMNA DERECHA - DATOS PERSONALES
+   ======================================== */
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formulario de datos personales */
+.personal-data-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Fila de formulario (para campos múltiples en una línea) */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Grupo de campo individual */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Labels de los campos */
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Inputs del formulario */
+.form-input {
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+}
+
+/* Inputs de solo lectura (datos de CURP) */
+.form-input[readonly] {
+    background: #f3f4f6; /* Fondo gris claro */
+    color: #666; /* Texto gris */
+    cursor: not-allowed;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #9d174d;
+}
+
+/* Selects del formulario */
+.form-select {
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #9d174d;
+}
+
+/* Títulos de sección */
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 1rem;
+}
+
+/* ========================================
+   FOOTER - PIE DE PÁGINA
+   ======================================== */
+
+.footer {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%);
+    color: white;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.footer-left {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+
+.footer-logo {
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-info p {
+    line-height: 1.6;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.social-media p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* Información de contacto (079) */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.phone-icon {
+    font-size: 1.5rem;
+}
+
+.contact-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact-text {
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVO
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .register-container {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-right {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-left {
+        flex-direction: column;
+    }
+}

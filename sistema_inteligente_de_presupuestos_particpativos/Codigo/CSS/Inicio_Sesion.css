@@ -1,0 +1,443 @@
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+
+/* Reset: Elimina márgenes y padding por defecto de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilos globales del body */
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    color: #333; /* Color de texto principal */
+}
+
+/* ========================================
+   HEADER - BARRA SUPERIOR
+   ======================================== */
+
+/* Contenedor principal del header con degradado burgundy */
+.header {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%); /* Degradado oficial gobierno */
+    padding: 1rem 2rem; /* 16px arriba/abajo, 32px izq/derecha */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Contenedor interno del header: logo + navegación */
+.header-content {
+    max-width: 1400px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Logo a la izquierda, nav a la derecha */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+/* Logo del gobierno de México */
+.logo img {
+    height: 80px; /* Altura fija del logo */
+    filter: brightness(0) invert(1); /* Convierte el logo a blanco */
+}
+
+/* Contenedor de la navegación */
+.nav {
+    display: flex; /* Elementos en fila */
+    align-items: center; /* Alinea verticalmente */
+    gap: 2rem; /* Espacio de 32px entre elementos */
+}
+
+/* Enlaces de navegación (Inicio, Transparencia) */
+.nav-link {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de fuente 16px */
+    transition: opacity 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto hover en enlaces */
+.nav-link:hover {
+    opacity: 0.8; /* Se vuelve semi-transparente */
+}
+
+/* Botón "Iniciar sesión" del header */
+.btn-login {
+    background: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    border: 2px solid white; /* Borde blanco */
+    padding: 0.6rem 1.8rem; /* Padding interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de mano al pasar */
+    transition: all 0.3s; /* Animación suave */
+}
+
+/* Efecto hover del botón login */
+.btn-login:hover {
+    background: white; /* Fondo blanco */
+    color: #621132; /* Texto burgundy */
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+/* Contenedor principal del contenido */
+.main-content {
+    min-height: calc(100vh - 200px); /* Altura mínima: altura ventana - 200px */
+}
+
+/* Banner informativo superior (rosa) */
+.info-banner {
+    background: linear-gradient(135deg, #7c1d47 0%, #be185d 100%); /* Degradado rosa más claro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Texto centrado */
+    padding: 1rem; /* Padding interno */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Texto en negritas del banner */
+.info-banner strong {
+    font-weight: 600; /* Peso de fuente semi-bold */
+}
+
+/* Contenedor principal del login: 2 columnas */
+.login-container {
+    max-width: 1400px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    display: grid; /* Sistema de grid */
+    grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+    min-height: 600px; /* Altura mínima */
+}
+
+/* ========================================
+   SECCIÓN IZQUIERDA - INFORMACIÓN
+   ======================================== */
+
+/* Columna izquierda con fondo burgundy */
+.left-section {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%); /* Degradado oficial */
+    padding: 4rem; /* Padding generoso: 64px */
+    display: flex; /* Flexbox para organizar contenido */
+    flex-direction: column; /* Elementos en columna vertical */
+    justify-content: center; /* Centra verticalmente el contenido */
+    color: white; /* Todo el texto en blanco */
+}
+
+/* Logo de LlaveMX */
+.logo-llave {
+    margin-bottom: 2rem; /* Espacio inferior de 32px */
+}
+
+.logo-llave img {
+    height: 80px; /* Altura del logo */
+    filter: brightness(0) invert(1); /* Convierte a blanco */
+}
+
+/* Título principal "El acceso a tu identidad digital" */
+.main-title {
+    font-size: 3rem; /* Tamaño grande: 48px */
+    font-weight: 700; /* Peso extra-bold */
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+/* Texto descriptivo debajo del título */
+.description {
+    font-size: 1.1rem; /* Tamaño ligeramente mayor: 17.6px */
+    line-height: 1.6; /* Espaciado cómodo para lectura */
+    opacity: 0.95; /* Ligeramente transparente */
+}
+
+/* ========================================
+   SECCIÓN DERECHA - FORMULARIO DE LOGIN
+   ======================================== */
+
+/* Columna derecha con fondo blanco */
+.right-section {
+    background: white; /* Fondo blanco limpio */
+    padding: 3rem; /* Padding: 48px */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+}
+
+/* Selector de idioma (esquina superior derecha) */
+.language-selector {
+    align-self: flex-end; /* Se posiciona a la derecha */
+    margin-bottom: 2rem; /* Espacio inferior */
+}
+
+.language-selector select {
+    background: white; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    padding: 0.5rem 1rem; /* Padding interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    font-size: 0.9rem; /* Tamaño de fuente */
+}
+
+/* Formulario de login */
+.login-form {
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 400px; /* Máximo 400px de ancho */
+}
+
+/* Grupo de campos del formulario */
+.form-group {
+    margin-bottom: 1.5rem; /* Espacio entre campos: 24px */
+}
+
+/* Etiquetas de los campos (label) */
+.form-group label {
+    display: block; /* Ocupa toda la línea */
+    margin-bottom: 0.5rem; /* Espacio con el input */
+    font-weight: 500; /* Peso medio */
+    color: #333; /* Color gris oscuro */
+}
+
+/* Campos de entrada (inputs) */
+.form-group input {
+    width: 100%; /* Ancho completo */
+    padding: 0.9rem; /* Padding interno generoso */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: border-color 0.3s; /* Animación del borde */
+}
+
+/* Input cuando está activo (focus) */
+.form-group input:focus {
+    outline: none; /* Quita el outline por defecto */
+    border-color: #9d174d; /* Borde burgundy cuando activo */
+}
+
+/* Contenedor del campo de contraseña (para el ícono del ojo) */
+.password-input {
+    position: relative; /* Posición relativa para el botón absoluto */
+}
+
+/* Botón para mostrar/ocultar contraseña (ojo) */
+.toggle-password {
+    position: absolute; /* Se posiciona sobre el input */
+    right: 10px; /* 10px desde la derecha */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste fino del centrado */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+    font-size: 1.2rem; /* Tamaño del ícono */
+    padding: 0.5rem; /* Área clickeable */
+}
+
+/* Enlaces de ayuda (¿Olvidaste tu usuario/contraseña?) */
+.help-link {
+    display: inline-block; /* Para aplicar margin */
+    margin-top: 0.5rem; /* Espacio superior */
+    color: #9d174d; /* Color burgundy */
+    text-decoration: none; /* Sin subrayado por defecto */
+    font-size: 0.9rem; /* Tamaño ligeramente menor */
+}
+
+/* Hover en enlaces de ayuda */
+.help-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Botón principal "Iniciar sesión" */
+.btn-submit {
+    width: 100%; /* Ancho completo */
+    background: #e5e7eb; /* Gris claro (deshabilitado por defecto) */
+    color: #9ca3af; /* Texto gris */
+    border: none; /* Sin borde */
+    padding: 1rem; /* Padding interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: not-allowed; /* Cursor de no permitido */
+    margin-bottom: 1rem; /* Espacio inferior */
+    transition: all 0.3s; /* Animación suave */
+}
+
+/* Botón submit cuando está habilitado */
+.btn-submit:enabled {
+    background: #9d174d; /* Fondo burgundy */
+    color: white; /* Texto blanco */
+    cursor: pointer; /* Cursor de mano */
+}
+
+/* Hover en botón submit habilitado */
+.btn-submit:enabled:hover {
+    background: #7c1d47; /* Burgundy más oscuro */
+}
+
+/* Botón "Crear cuenta" */
+/* Botón "Crear cuenta" */
+.btn-create {
+    width: 100%;
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;           /* + Requerido para enlaces */
+    text-align: center;       /* + Centrado */
+    text-decoration: none;    /* + Sin subrayado */
+}
+
+/* Hover en botón crear cuenta */
+.btn-create:hover {
+    background: #f9fafb;
+    border-color: #9d174d;
+}
+
+
+/* ========================================
+   FOOTER - PIE DE PÁGINA
+   ======================================== */
+
+/* Contenedor principal del footer */
+.footer {
+    background: linear-gradient(135deg, #621132 0%, #9d174d 100%); /* Degradado burgundy */
+    color: white; /* Texto blanco */
+    padding: 2rem; /* Padding: 32px */
+    margin-top: auto; /* Se empuja al final de la página */
+}
+
+/* Contenedor interno del footer: 2 columnas */
+.footer-content {
+    max-width: 1400px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    display: grid; /* Sistema de grid */
+    grid-template-columns: 2fr 1fr; /* Columna izquierda más ancha (2:1) */
+    gap: 3rem; /* Espacio entre columnas: 48px */
+}
+
+/* Sección izquierda del footer (logo + texto) */
+.footer-left {
+    display: flex; /* Flexbox */
+    gap: 2rem; /* Espacio entre logo y texto */
+    align-items: start; /* Alineación superior */
+}
+
+/* Logo del footer */
+.footer-logo {
+    height: 200px; /* Altura del logo */
+    filter: brightness(0) invert(1); /* Convierte a blanco */
+}
+
+/* Título "Que somos?" */
+.footer-info h3 {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    margin-bottom: 0.8rem; /* Espacio inferior */
+}
+
+/* Texto descriptivo del footer */
+.footer-info p {
+    line-height: 1.6; /* Espaciado entre líneas */
+    opacity: 0.9; /* Ligeramente transparente */
+    font-size: 0.95rem; /* Tamaño ligeramente menor */
+}
+
+/* Sección derecha del footer (enlaces + redes sociales) */
+.footer-right {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Elementos en columna */
+    gap: 1.5rem; /* Espacio entre elementos */
+    align-items: flex-end; /* Alineados a la derecha */
+}
+
+/* Enlace de denuncia */
+.footer-link {
+    color: white; /* Texto blanco */
+    text-decoration: underline; /* Subrayado */
+    font-size: 0.95rem; /* Tamaño ligeramente menor */
+}
+
+/* Texto "Síguenos en" */
+.social-media p {
+    margin-bottom: 0.8rem; /* Espacio inferior */
+    font-size: 0.95rem; /* Tamaño de fuente */
+}
+
+/* Contenedor de íconos de redes sociales */
+.social-icons {
+    display: flex; /* Flexbox */
+    gap: 1rem; /* Espacio entre íconos: 16px */
+}
+
+/* Enlaces de redes sociales */
+.social-icons a {
+    color: white; /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.5rem; /* Tamaño de íconos */
+    transition: opacity 0.3s; /* Animación suave */
+}
+
+/* Hover en íconos sociales */
+.social-icons a:hover {
+    opacity: 0.7; /* Se vuelve semi-transparente */
+}
+
+/* ========================================
+   DISEÑO RESPONSIVO - ADAPTACIÓN A MÓVILES
+   ======================================== */
+
+/* TABLETS Y PANTALLAS MEDIANAS (1024px o menos) */
+@media (max-width: 1024px) {
+    /* El login pasa de 2 columnas a 1 columna */
+    .login-container {
+        grid-template-columns: 1fr; /* 1 sola columna */
+    }
+    
+    /* Reduce padding en sección izquierda */
+    .left-section {
+        padding: 3rem 2rem; /* 48px arriba/abajo, 32px izq/derecha */
+    }
+    
+    /* Título más pequeño en tablets */
+    .main-title {
+        font-size: 2.5rem; /* 40px en lugar de 48px */
+    }
+    
+    /* Footer también pasa a 1 columna */
+    .footer-content {
+        grid-template-columns: 1fr; /* 1 sola columna */
+        gap: 2rem; /* Reduce el espacio entre secciones */
+    }
+    
+    /* Alinea la sección derecha del footer a la izquierda */
+    .footer-right {
+        align-items: flex-start; /* Alinea a la izquierda en móvil */
+    }
+}
+
+/* MÓVILES (768px o menos) */
+@media (max-width: 768px) {
+    /* Header pasa de horizontal a vertical */
+    .header-content {
+        flex-direction: column; /* Elementos en columna */
+        gap: 1rem; /* Espacio entre elementos */
+    }
+    
+    /* Navegación también vertical */
+    .nav {
+        flex-direction: column; /* Elementos en columna */
+        gap: 1rem; /* Espacio entre enlaces */
+    }
+    
+    /* Título aún más pequeño en móviles */
+    .main-title {
+        font-size: 2rem; /* 32px */
+    }
+    
+    /* Footer izquierdo pasa a vertical (logo arriba, texto abajo) */
+    .footer-left {
+        flex-direction: column; /* Elementos en columna */
+    }
+}

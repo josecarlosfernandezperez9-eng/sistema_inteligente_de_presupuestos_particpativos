@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - LlaveMX</title>
+    <link rel="stylesheet" href="../CSS/Registro.css">
+   
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="" alt="Gobierno de México">
+            </div>
+
+<nav class="nav">
+    <a href="inicio.html" class="nav-link">Inicio</a>
+    <a href="gastos.html" class="nav-link">Transparencia</a>
+    <a href="Inicio_Sesion.html" class="btn-login">Iniciar sesión</a>
+</nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="register-container">
+            <!-- Columna Izquierda - CURP -->
+            <div class="left-column">
+                <div class="curp-section">
+                    <label class="curp-label">
+                        CURP - Si no la conoces, puedes 
+                        <a href="#" class="link-consultarla">consultarla aquí.</a>
+                    </label>
+                    
+                    <input 
+                        type="text" 
+                        id="curp" 
+                        class="curp-input"
+                        placeholder="AAA ejemplo"
+                        maxlength="18"
+                        required
+                    >
+
+                    <!-- reCAPTCHA -->
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="tu-site-key-aqui"></div>
+                    </div>
+
+                    <!-- Información SMS -->
+                    <div class="sms-info">
+                        <span class="info-icon">🔔</span>
+                        <p>Llave MX podrá enviarte mensajes SMS para verificar tu identidad y notificarte sobre trámites relacionados con tu cuenta. Al continuar, aceptas recibir estos mensajes. Puedes consultar los <a href="#" class="link-terms">Términos y Condiciones.</a></p>
+                    </div>
+
+                    <button type="button" class="btn-validate" onclick="validarCURP()">
+                        Validar CURP
+                    </button>
+                </div>
+
+                <!-- Sección de Teléfono -->
+                <div class="phone-section">
+                    <label class="phone-label">
+                        Número de celular
+                        <span class="required-field">* Este campo es requerido</span>
+                    </label>
+                    <div class="phone-input-container">
+                        <select class="country-code">
+                            <option value="+52">🇲🇽 +52</option>
+                            <option value="+1">🇺🇸 +1</option>
+                        </select>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            class="phone-input"
+                            placeholder="+52 222 123 4567"
+                            required
+                        >
+                    </div>
+
+                    <label class="phone-label confirm-label">
+                        Confirma tu número de celular
+                        <span class="required-field">* Este campo es requerido</span>
+                    </label>
+                    <div class="phone-input-container">
+                        <select class="country-code">
+                            <option value="+52">🇲🇽 +52</option>
+                            <option value="+1">🇺🇸 +1</option>
+                        </select>
+                        <input 
+                            type="tel" 
+                            id="phone-confirm" 
+                            class="phone-input"
+                            placeholder="+52 222 123 4567"
+                            required
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha - Datos Personales -->
+            <div class="right-column">
+                <form class="personal-data-form" id="registerForm">
+                    <!-- Nombres -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nombre (s)</label>
+                            <input type="text" id="nombre" class="form-input" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Primer Apellido</label>
+                            <input type="text" id="apellidoPaterno" class="form-input" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Segundo Apellido</label>
+                            <input type="text" id="apellidoMaterno" class="form-input" readonly>
+                        </div>
+                    </div>
+
+                    <!-- Sexo y Fecha -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Sexo</label>
+                            <input type="text" id="sexo" class="form-input" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de nacimiento</label>
+                            <input type="text" id="fechaNacimiento" class="form-input" readonly>
+                        </div>
+                    </div>
+
+                    <!-- Domicilio -->
+                    <h3 class="section-title">Completa los datos de tu domicilio:</h3>
+
+                    <!-- País -->
+                    <div class="form-group">
+                        <label>País de Residencia *</label>
+                        <select id="pais" class="form-select" required>
+                            <option value="">Selecciona un país</option>
+                            <option value="Mexico" selected>México</option>
+                            <option value="USA">Estados Unidos</option>
+                            <option value="Canada">Canadá</option>
+                        </select>
+                    </div>
+
+                    <!-- Código Postal y Estado -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Código Postal *</label>
+                            <input type="text" id="codigoPostal" class="form-input" placeholder="Ejemplo: 12345" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Estado *</label>
+                            <select id="estado" class="form-select" required>
+                                <option value="">Selecciona un estado</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Municipio y Colonia -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Municipio / Alcaldía *</label>
+                            <input type="text" id="municipio" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Colonia *</label>
+                            <select id="colonia" class="form-select" required>
+                                <option value="">Selecciona una colonia</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Calle y Número -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Calle</label>
+                            <input type="text" id="calle" class="form-input" placeholder="Ejemplo: El Oro">
+                        </div>
+                        <div class="form-group">
+                            <label>Número</label>
+                            <input type="text" id="numero" class="form-input" placeholder="Ejemplo: 100">
+                        </div>
+                    </div>
+
+                    <!-- Correo Electrónico -->
+                    <h3 class="section-title">Correo electrónico (opcional)</h3>
+
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-input" placeholder="Ingresa tu correo electrónico">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirma tu correo electrónico (opcional)</label>
+                        <input type="email" id="emailConfirm" class="form-input" placeholder="Confirma tu correo electrónico">
+                    <!-- Botón de Envío -->
+                        <button type="submit" class="btn-submit">Guardar Datos</button>
+                    </div>
+                </form>
+                <script>
+                alert("La validación se realizó correctamente.");
+
+    // Redirección a consulta.html
+    window.location.href = "consulta.html";
+});
+</script>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="../../Galeria/Logos/LogoTepo.png" alt="Gobierno de México" class="footer-logo">
+                
+                <div class="footer-info">
+                    <h3>Que somos?</h3>
+                    <p>Somos plataforma que promueve la innovación en el gobierno, impulsa la eficiencia, y transforma los procesos para proveer de información y una plataforma de participación ciudadana.</p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <a href="#" class="footer-link">Denuncia contra servidores públicos</a>
+                
+                <div class="social-media">
+                    <p>Síguenos en</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <span class="phone-icon">❄️</span>
+                    <span class="contact-number">079</span>
+                    <span class="contact-text">Comunícate, estamos para ayudarte</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Java/Registro.jS"></script>
+</body>
+</html>
