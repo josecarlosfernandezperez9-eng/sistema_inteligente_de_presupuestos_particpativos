@@ -22,7 +22,7 @@ body {
 
 /* Contenedor principal del header con degradado burgundy */
 .header {
-    background: linear-gradient(135deg, #621132 0%, #9d174d 100%); /* Degradado oficial gobierno */
+    background: linear-gradient(135deg, #331522 0%, #8b2f4f 100%); /* Degradado oficial gobierno */
     padding: 1rem 2rem; /* 16px arriba/abajo, 32px izq/derecha */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra suave */
 }
@@ -298,147 +298,119 @@ body {
 }
 
 
-/* ========================================
-    FOOTER - PIE DE PÁGINA
-   ======================================== */
-
-/* Contenedor principal del footer */
+/* Footer */
 .footer {
-    background: linear-gradient(135deg, #621132 0%, #9d174d 100%); /* Degradado burgundy */
-    color: white; /* Texto blanco */
-    padding: 2rem; /* Padding: 32px */
-    margin-top: auto; /* Se empuja al final de la página */
+    background: linear-gradient(135deg, #331522 0%, #8b2f4f 100%);
+    padding: 30px;
+    color: #fff;
 }
 
-/* Contenedor interno del footer: 2 columnas */
 .footer-content {
-    max-width: 1400px; /* Ancho máximo */
-    margin: 0 auto; /* Centrado horizontal */
-    display: grid; /* Sistema de grid */
-    grid-template-columns: 2fr 1fr; /* Columna izquierda más ancha (2:1) */
-    gap: 3rem; /* Espacio entre columnas: 48px */
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-/* Sección izquierda del footer (logo + texto) */
-.footer-left {
-    display: flex; /* Flexbox */
-    gap: 2rem; /* Espacio entre logo y texto */
-    align-items: start; /* Alineación superior */
-}
-
-/* Logo del footer */
 .footer-logo {
-    height: 100px; /* Altura del logo */
-    filter: brightness(0) invert(1); /* Convierte a blanco */
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Título "Que somos?" */
-.footer-info h3 {
-    font-size: 1.2rem; /* Tamaño de fuente */
-    margin-bottom: 0.8rem; /* Espacio inferior */
+.footer-logo img {
+    height: 150px;
+    filter: brightness(0) invert(1);
 }
 
-/* Texto descriptivo del footer */
-.footer-info p {
-    line-height: 1.6; /* Espaciado entre líneas */
-    opacity: 0.9; /* Ligeramente transparente */
-    font-size: 0.95rem; /* Tamaño ligeramente menor */
+.footer-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
-/* Sección derecha del footer (enlaces + redes sociales) */
-.footer-right {
-    display: flex; /* Flexbox */
-    flex-direction: column; /* Elementos en columna */
-    gap: 1.5rem; /* Espacio entre elementos */
-    align-items: flex-end; /* Alineados a la derecha */
+.footer-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 500px;
 }
 
-/* Enlace de denuncia */
-.footer-link {
-    color: white; /* Texto blanco */
-    text-decoration: underline; /* Subrayado */
-    font-size: 0.95rem; /* Tamaño ligeramente menor */
+.footer-links {
+    text-align: right;
 }
 
-/* Texto "Síguenos en" */
-.social-media p {
-    margin-bottom: 0.8rem; /* Espacio inferior */
-    font-size: 0.95rem; /* Tamaño de fuente */
+.footer-links a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
 }
 
-/* Contenedor de íconos de redes sociales */
 .social-icons {
-    display: flex; /* Flexbox */
-    gap: 1rem; /* Espacio entre íconos: 16px */
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: flex-end;
 }
 
-/* Enlaces de redes sociales */
 .social-icons a {
-    color: white; /* Color blanco */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 1.5rem; /* Tamaño de íconos */
-    transition: opacity 0.3s; /* Animación suave */
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
-/* Hover en íconos sociales */
-.social-icons a:hover {
-    opacity: 0.7; /* Se vuelve semi-transparente */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
-/* ========================================
-    DISEÑO RESPONSIVO - ADAPTACIÓN A MÓVILES
-   ======================================== */
+.contact-info span {
+    font-size: 0.85rem;
+}
 
-/* TABLETS Y PANTALLAS MEDIANAS (1024px o menos) */
+/* Responsive */
 @media (max-width: 1024px) {
-    /* El login pasa de 2 columnas a 1 columna */
-    .login-container {
-        grid-template-columns: 1fr; /* 1 sola columna */
-    }
-    
-    /* Reduce padding en sección izquierda */
-    .left-section {
-        padding: 3rem 2rem; /* 48px arriba/abajo, 32px izq/derecha */
-    }
-    
-    /* Título más pequeño en tablets */
-    .main-title {
-        font-size: 2.5rem; /* 40px en lugar de 48px */
-    }
-    
-    /* Footer también pasa a 1 columna */
-    .footer-content {
-        grid-template-columns: 1fr; /* 1 sola columna */
-        gap: 2rem; /* Reduce el espacio entre secciones */
-    }
-    
-    /* Alinea la sección derecha del footer a la izquierda */
-    .footer-right {
-        align-items: flex-start; /* Alinea a la izquierda en móvil */
+    .categories-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-/* MÓVILES (768px o menos) */
 @media (max-width: 768px) {
-    /* Header pasa de horizontal a vertical */
-    .header-content {
-        flex-direction: column; /* Elementos en columna */
-        gap: 1rem; /* Espacio entre elementos */
+    .container-header {
+        flex-direction: column;
+        gap: 15px;
     }
-    
-    /* Navegación también vertical */
+
     .nav {
-        flex-direction: column; /* Elementos en columna */
-        gap: 1rem; /* Espacio entre enlaces */
+        gap: 20px;
+        font-size: 0.85rem;
     }
-    
-    /* Título aún más pequeño en móviles */
-    .main-title {
-        font-size: 2rem; /* 32px */
+
+    .page-title {
+        font-size: 1.8rem;
     }
-    
-    /* Footer izquierdo pasa a vertical (logo arriba, texto abajo) */
-    .footer-left {
-        flex-direction: column; /* Elementos en columna */
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }

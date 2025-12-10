@@ -13,7 +13,7 @@ body {
 
 /* Header */
 .header {
-    background: #6b1f3f;
+    background: linear-gradient(135deg, #331522 0%, #8b2f4f 100%);
     padding: 12px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -174,7 +174,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #6b1f3f;
+    background: linear-gradient(135deg, #331522 0%, #8b2f4f 100%);
     padding: 30px;
     color: #fff;
 }
